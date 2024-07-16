@@ -5,11 +5,11 @@ import useSWRInfinite from 'swr/infinite';
 
 import { useLoginContext } from '@/hooks/useLoginContext';
 
+import SearchResultItem from '@/components/home/item';
 import ItemBottom from '@/components/home/ItemBottom';
 import Loading from '@/components/loading/Loading';
 import { SearchSkeleton } from '@/components/loading/skeleton';
 import Navbar from '@/components/navbar/Navbar';
-import SearchResultItem from '@/components/project/item';
 import Seo from '@/components/Seo';
 import ToTop from '@/components/toTop/ToTop';
 

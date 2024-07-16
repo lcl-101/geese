@@ -24,6 +24,7 @@ interface RepositoryItemProps {
     lang_color: string;
     primary_lang: string;
     publish_at?: string;
+    updated_at?: string;
     clicks_total?: number;
     stars?: number;
   };
@@ -55,6 +56,7 @@ const RepositoryItem: NextPage<RepositoryItemProps> = ({
     lang_color,
     primary_lang,
     publish_at,
+    updated_at,
     clicks_total,
     stars,
   } = item;
@@ -157,7 +159,7 @@ const RepositoryItem: NextPage<RepositoryItemProps> = ({
                           width='20'
                           height='20'
                           src={author_avatar}
-                          className='bg-img h-5 w-5 mr-1 rounded'
+                          className='bg-img mr-1 h-5 w-5 rounded'
                         />
                         <span className='hidden md:inline'>{author}</span>
                         <span className='px-1'>·</span>
@@ -195,7 +197,7 @@ const RepositoryItem: NextPage<RepositoryItemProps> = ({
                   </span>
                   <span className='hidden md:inline'>
                     <span className='px-1'>·</span>
-                    <time>{fromNow(publish_at || '')}</time>
+                    <time>{fromNow(publish_at || updated_at || '')}</time>
                   </span>
                 </div>
                 {/* 项目 star 数 */}
